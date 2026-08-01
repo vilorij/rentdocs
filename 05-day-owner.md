@@ -126,7 +126,12 @@ the verticals you actually have turned on, so a scooter shop never shows an
 empty villa section. Prices are shown per day, per night or per person,
 whichever the thing is sold by, in your own currency.
 
-![The live storefront as a customer sees it, with product cards and prices](img/storefront.png)
+**The look is a setting, not a fixed design.** Settings → E-Shop offers several
+templates, from a restrained one to a bright holiday style, plus your own theme
+colour and hero text. The screenshot below is one of them — try a few and pick
+the one that sounds like your shop.
+
+![The live storefront as a customer sees it: a card per vehicle with its type, year, transmission and daily price, and a Book Now button](img/storefront.png)
 
 Two things are deliberately left off, because a card with no price is worse than
 no card: a property with no nightly rate, and a trip with no rate set. If
