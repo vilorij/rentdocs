@@ -119,6 +119,8 @@ The fields that matter:
 to answer from, and nothing else. Documents are categorised: menu, pricing,
 conditions, partners, FAQ, other.
 
+![The knowledge base: each document with its category, a Live badge and an Enabled switch, and the Import with AI button above](img/settings-kb.png)
+
 A document you write yourself with **Add document** goes live immediately. Only
 documents the AI pulls in with **Import with AI** arrive as drafts, and those
 you have to press **Confirm** on before the bot will use them.
@@ -126,6 +128,17 @@ you have to press **Confirm** on before the bot will use them.
 Import handles pasted text, photos, PDF and Word files, or your website address.
 (The hint above the upload box still says PDFs are not supported. It is out of
 date: they are.)
+
+**Importing your website** is the fastest way to fill this in. Type your address,
+press **Import site**, and it reads your pages and tidies them into a set of
+drafts for you to review.
+
+![Import from your website: a site address typed in, and beneath it the list of drafts it produced, each with a green tick](img/settings-kb-import.png)
+
+One thing to know before you rely on it: it reads the **text your pages serve**.
+A site built as a single-page app renders its content in the browser, so the
+importer sees an empty page and tells you so. If that happens, upload your
+documents or paste the text instead.
 
 The practical advice: put your prices and your conditions in here properly. The
 bot will refuse to guess, which is the behaviour you want, but it means a thin

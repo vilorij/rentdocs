@@ -10,15 +10,15 @@ usually happen.
 Your trial runs for **14 days**, and a banner at the top of the screen counts it
 down on a computer and on a phone.
 
-**When it expires and you have not chosen a plan, your account goes read-only.**
-This is the single most confusing moment in the product, because the app does
-not lock you out or show a wall. Everything still loads, every page still looks
-normal, and then every attempt to save anything fails with
+**When it expires and you have not chosen a plan, your account goes
+read-only.** The countdown banner turns red and says so, with an **Upgrade**
+button beside it:
 
-> Account is read-only (trial expired). Please upgrade to continue.
+> Your account is read-only — your free trial has ended. Upgrade to continue.
 
-You can read your data. You cannot add a booking, confirm one, create a task, or
-change a setting until you pick a plan.
+Your data is all still there and every page still opens. What stops is writing:
+you cannot add a booking, confirm one, create a task or change a setting until
+you pick a plan. Nothing is deleted, and nothing expires while you decide.
 
 Two things are also taken back at that moment unless you go to the Business plan:
 
@@ -95,9 +95,9 @@ Two habits worth forming from day one:
 
 ## Where your customers live
 
-Every "day in the life" page in this documentation shows you how to create a
-customer inline while taking a booking, because that is the fastest path when
-somebody is standing in front of you.
+Creating a customer inline while taking a booking is the fastest path when
+somebody is standing in front of you, and that is how the day-to-day pages do
+it.
 
 **Customers** in the menu is the fuller version, and worth knowing about:
 

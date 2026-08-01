@@ -76,10 +76,9 @@ export default defineConfig({
       pattern: 'https://github.com/vilorij/rentdocs/edit/master/:path',
       text: 'Suggest a change to this page',
     },
-    lastUpdatedText: 'Checked against the product',
+    lastUpdatedText: 'Updated',
     footer: {
-      message:
-        'Every page is checked against the running product. Where something does not work the way the screen suggests, it says so.',
+      message: 'Ranchao — rental and tour operations.',
     },
   },
 })

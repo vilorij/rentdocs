@@ -1,23 +1,28 @@
 # A day with property rental
 
-Written for the person handling arrivals and departures.
+Written for the person handling arrivals and departures: getting the villa
+ready, getting the guest in, and getting the keys back.
 
 The shape is the same as vehicle rental: a thing you own, a booking against it,
-and a short list of jobs that appears when you confirm. The differences are all
-below.
+and a short list of jobs that appears when you confirm.
 
 ---
 
-## Setting up: the properties
+## Before the first guest: put the properties in
 
-**Properties → Add Property.** Only two things are actually required to start
-taking bookings: the **name** and a **nightly rate**.
+**Properties → Add Property.** Two things are required to start taking
+bookings: the **name** and the nightly rate, which the form labels
+**Daily Rate**.
 
-The form is long because it can describe anything from a single room to a villa:
-type, resort or complex, building, unit number, distance to the beach and to the
-centre, bedrooms, bathrooms, amenities, rules, photos. None of that blocks you.
-Fill in the name and the rate, save, and come back to the rest when you have
-time.
+![The Add Property form, part filled with a name, a type and a nightly rate](img/property-form.png)
+
+The form is long because it can describe anything from a single room to a
+villa: type, resort or complex, building, unit number, distance to the beach and
+to the centre, bedrooms, bathrooms, amenities, rules, photos. None of it blocks
+you. Fill in the name and the rate, save, and come back to the rest when you
+have time.
+
+![The Properties list, showing several properties with their nightly rates](img/properties-list.png)
 
 ---
 
@@ -26,10 +31,14 @@ time.
 **Bookings → New Booking**, and pick the **Property** tab if you run more than
 one vertical.
 
-Create the customer inline if they are new (first name and phone), pick the
-property, the dates, and the nightly rate. Deposit is optional.
+Create the customer right on the form if they are new (first name and phone),
+then the property, the dates and the nightly rate. A deposit is optional.
 
-Press **Confirm** on the booking and three jobs appear:
+![A property booking showing the guest, the nights booked and the money block](img/property-booking.png)
+
+### Confirming it
+
+Press **Confirm** and three jobs appear:
 
 | Task | Priority | Due |
 |---|---|---|
@@ -38,12 +47,12 @@ Press **Confirm** on the booking and three jobs appear:
 | Check-out *(guest)* from *(property)* | High | Check-out date |
 
 Each carries a checklist from your templates, which is where a housekeeping
-standard actually lives: edit them at **Settings → Task checklists** (owner).
-That page also decides which tasks are created at all, and what they are
+standard actually lives. Edit them at **Settings → Task checklists** (owner
+only). That page also decides which tasks are created at all, and what they are
 called.
 
 **They are created with nobody attached, on purpose.** Everyone on your team
-sees unclaimed work and starting a task claims it, so two people cannot both
+sees unclaimed work, and starting a task claims it, so two people cannot both
 turn up to clean the same villa. Assign one yourself when you want a specific
 person on it.
 
@@ -53,26 +62,15 @@ A booking confirmed by a payment (card link or crypto) creates the same tasks.
 
 ## Arrival and departure
 
-**Start** when the guest checks in. **Process Return** when they check out: it
-records the actual date, computes late days and a late fee if there are any, and
-completes the booking.
+**Start** when the guest checks in.
 
-It also records how much of the deposit was kept and how much goes back.
+**Process Return** when they check out. It records the actual date, works out
+late days and a late fee if there are any, completes the booking, and records
+how much of the deposit was kept and how much goes back.
 
-**Cancel closes the booking's open tasks** with a note, leaves finished ones
-alone, and marks unpaid instalments cancelled. Anything already paid is left
-untouched.
-
----
-
-## Owners and settlements
-
-If you manage properties for other people, **Owners** holds them and
-**Settlements** is where you reconcile what you owe. Owner payouts share the
-same machinery as the vehicle vertical.
-
-Only the owner of the account can delete a property. A manager can do everything
-else with it.
+**Cancel closes things rather than deleting them.** Open tasks are closed with a
+note, finished ones are left alone, and unpaid instalments are marked cancelled.
+Anything already paid is never touched.
 
 ---
 
@@ -80,7 +78,7 @@ else with it.
 
 A booking marked long-term with a monthly rate gets a **payment schedule**: a
 card on the booking with a **Record Payment** button, an amount, a method and a
-note. That is the closest thing to instalment tracking in the product.
+note.
 
 Saving a long-term booking without a deposit shows a warning and lets you
 continue.
@@ -93,18 +91,42 @@ Card link, PromptPay, bank transfer, crypto, cash: see
 [Getting paid](06-getting-paid.md). Two things to carry into this vertical:
 
 - On a short booking there is **no cash-recording button**. The Payment Method
-  dropdown on the form is a label, not an action. Long stays are the exception:
-  see Record Payment above.
-- Payment slips uploaded through the online store have **no approve or reject
-  button**. You see the image; you settle it yourself.
+  dropdown on the form is a label for what you expect, not a record that money
+  arrived. Long stays are the exception: **Record Payment**, above.
+- A payment slip uploaded through the online store waits for you on the booking:
+  look at the image and press **Approve payment** or **Reject** with a reason.
+  Owner and manager only, and on a computer — the mobile booking page shows the
+  slip but not the buttons.
 
 ---
 
-## What you will not find
+## Owners and settlements
 
-- **No Vehicles menu, no Maintenance page, no Expenses page.** Those belong to
-  the vehicle vertical. If you track property maintenance costs, that is a gap
-  today and it goes in your own spreadsheet.
-- **Nothing about vehicles.** The Dashboard tiles and the Reports breakdown
-  follow the vertical you run, so you get properties where a rental shop gets
-  scooters. Run both and you get both, side by side.
+If you manage properties for other people, **Owners** is where you record them
+and the split you have agreed, and a property is linked to its owner on the
+property itself.
+
+**Settlements** then produces a monthly statement per owner: pick the month,
+press **Generate**, and you get what each owner's villas earned, their share and
+yours.
+
+![The Settlements table: three villa owners with the villas they own, the month's revenue and how it splits between owner and company](img/settlements.png)
+
+A completed stay counts in the month it happened, split across two months when
+it straddles them. A long stay counts the instalments actually **paid**, so a
+month the guest has not settled never lands on an owner's statement as money you
+owe.
+
+Only the owner of the account can delete a property. A manager can do everything
+else with it.
+
+---
+
+## Where the rest of it lives
+
+- **There is no Vehicles, Maintenance or Expenses page** on this vertical; those
+  belong to vehicle rental. Track property maintenance costs outside the
+  platform.
+- **The Dashboard tiles and the Reports breakdown follow the vertical you run**,
+  so you get properties where a rental shop gets scooters. Run both and you get
+  both, side by side.

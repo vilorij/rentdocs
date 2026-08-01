@@ -78,7 +78,7 @@ Set the conversation to **open**. The bot goes quiet on it and stays quiet until
 somebody resolves the conversation.
 
 **"Where is the Omise / card payment link button?"**
-On a booking page, left column, under Booking Information, on **desktop only**.
+On a booking page, in the left column under Booking Information. It is on the phone layout too.
 It only works once Omise is connected at Settings → Payments. (The menu entry
 says "Payments"; the page heading says "Payment Methods". Same page.)
 See [Getting paid](06-getting-paid.md).

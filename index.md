@@ -4,7 +4,7 @@ layout: home
 hero:
   name: Ranchao
   text: How to run your shop
-  tagline: The working manual for running a shop on Ranchao. Checked against the running product, so what it describes is what the screen actually does.
+  tagline: How to set up your shop, take bookings, get the work done and get paid.
   actions:
     - theme: brand
       text: Start here
@@ -43,25 +43,27 @@ A new account walks a short tour on first login: add one thing you rent out, see
 where bookings live, then your contact details and how you take payment. Four
 steps for a rental shop, six for trips, and you can stop after any of them.
 
-![The whole tour](img/tour-walkthrough.gif)
+![The guided tour stepping through adding a vehicle, finding bookings, and setting contact and payment details](img/tour-walkthrough.gif)
 
 If you leave halfway through, for example because you went off and actually
 added a vehicle, a **Continue setup** bar follows you until you come back to it
 or dismiss it. Resuming picks up at the next thing, not the one you just did.
 
-![Continue setup](img/tour-resume.png)
+![The Continue setup bar, offering to pick the tour up where you left it](img/tour-resume.png)
 
 The same checklist lives on the Dashboard afterwards and tracks itself from your
 real data, so a step ticks off when the thing exists, not when you clicked past
 it. **Restart tour** on that card runs it again.
 
-## Who these pages are for
+## Where to start
 
-The person running the shop: the owner who sets it up, and the manager, agent or
-employee who works in it every day.
+If you are setting the shop up, start with
+[A day as the owner](/05-day-owner) — it walks the settings in the order you
+will need them.
 
-They describe what the product does **today**, not what it is meant to do
-eventually. Every page is checked against the running product, so where a screen
-implies something it does not do, the page says so rather than staying quiet.
-That is the whole point of writing them this way: a manual you can act on
-without having to try it first.
+If the shop is already running and you work in it, go straight to your day:
+[vehicle rental](/02-day-vehicle-rental), [trips and tours](/03-day-trips) or
+[property rental](/04-day-property).
+
+And [Where do I turn that on?](/08-where-do-i-turn-that-on) is the page to
+search when you know what you want and not where it lives.

@@ -29,9 +29,11 @@ Users, Reports and Settings.
 
 > **If you run trips or properties**, the Dashboard and Reports follow your
 > vertical, including the revenue breakdown: which villas earn, which trips
-> earn. Trips are broken down **by destination**, not by boat, because what you
-> sell is "Ko Tao", not "boat number three". Run more than one vertical and you
-> get one breakdown per vertical, side by side.
+> earn. Trips break down **by destination**, not by boat, because what you sell
+> is "Ko Tao", not "boat number three". Run more than one vertical and you get
+> one breakdown per vertical, side by side.
+
+![Reports, showing revenue over the period and the per-item breakdown beneath it](img/reports.png)
 
 ---
 
@@ -52,7 +54,7 @@ The practical split: an **Owner** configures the shop, a **Manager** runs it, an
 **Agent** sells, an **Employee** does the jobs on the ground.
 
 Only the Owner can open Settings. If a manager says "I can't find where to
-change the payment details", that is why, and it is deliberate.
+change the payment details", that is why.
 
 ---
 
@@ -68,22 +70,21 @@ Most of the day happens on a phone, so the layout changes below 768px wide.
 - **More** holds Dashboard, Crypto Payments, Users, Reports, Settings, the
   language switch and your account.
 
-Three things worth knowing before you plan someone's day around a phone:
+Three things worth knowing when you plan somebody's day around a phone:
 
-- **Dashboard is not a tab.** It is inside More.
-- **Maintenance and Expenses have no phone entry point at all.** They exist only
-  under the desktop Vehicles menu. On a phone you would have to type the address.
-- **Card payment links can only be created on desktop.** The panel is not on the
-  mobile booking page.
+- **Dashboard lives under More**, not on the bottom bar.
+- **Maintenance and Expenses are desktop screens.**
 
-The guided setup tour also only starts by itself on desktop. On a phone, start
-it from the "Get started" card on the Dashboard.
+So: the jobs on the ground run from a phone, and the office half hour runs from
+a computer. The guided setup tour follows the same split — it starts by itself
+on desktop, and on a phone you start it from the **Get started** card on the
+Dashboard.
 
 ---
 
 ## The four numbers on the Dashboard
 
-![Dashboard](img/dashboard.png)
+![The Dashboard: four tiles across the top with the day's numbers, and the charts beneath](img/dashboard.png)
 
 | Tile | What it counts |
 |---|---|
@@ -92,10 +93,11 @@ it from the "Get started" card on the Dashboard.
 | **Vehicles available** / **Properties available** / **Trips today** | Whichever fits what you run. Vehicles and properties show available out of total; trips shows today's departures and how many people are going |
 | **Revenue (Month)** | The total of bookings marked Completed whose record was last touched this month |
 
-Two things to know. The revenue figure counts a booking on the date its record
-was last edited, not the date money arrived, so treat it as a rough indicator
-rather than an accounting figure. And these numbers are not filtered by role:
-everyone who can open the Dashboard sees shop-wide totals.
+Two things to know about that last one. It counts a booking on the date its
+record was last edited rather than the date money arrived, so read it as a
+direction of travel, not as your books. And the tiles are shop-wide for
+everyone who can open the Dashboard — they are not filtered to the person
+looking.
 
 ---
 

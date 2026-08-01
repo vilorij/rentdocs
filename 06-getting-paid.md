@@ -1,113 +1,119 @@
 # Getting paid
 
-> **The platform does not produce invoices, receipts or contracts.** There is no
-> PDF and nothing to print. If your customers need paperwork, produce it outside
-> the platform. Details at the bottom of this page.
+Two questions run this page: **how do I ask a customer for money**, and **how do
+I know it arrived**. The methods differ most on the second one.
 
-Six ways money can reach you. They differ a lot in how much the software does
-for you, so this page is organised by that: what you click, what the customer
-gets, and whether the booking updates by itself.
-
-| How they pay | You start it | Customer gets | Does the booking update on its own? |
+| How they pay | You start it | Customer gets | Booking updates by itself |
 |---|---|---|---|
-| **Card link (Omise)** | Booking page, desktop | A link you send them | **Yes**, by webhook |
+| **Card link (Omise)** | Booking page | A link you send them | **Yes**, by webhook |
 | **USDT crypto** | The chat bot offers it | Address + QR + amount | **Yes**, watched on-chain |
 | **PromptPay** | Online store, or the bot | A QR with the amount in it | Only via the bot |
 | **Bank transfer** | Online store only | Your account details | No |
 | **Cash** | Trips page, or a long-term booking | Nothing | No |
 | **Monthly instalments** | Booking page, long-term rentals | Nothing | No |
 
+**Two of them reconcile themselves: the card link and crypto.** For everything
+else, somebody has to look and confirm.
+
 ---
 
-## The card payment link
+## Send a card payment link
 
-**Where:** open a booking and scroll down. Under **Booking Information**, in the
-left-hand column, there is a card headed **Card payment link (OMISE)**. Desktop
-only: the panel is not on the mobile booking page.
+The everyday way to charge a customer who is not standing in front of you.
 
-The card, and everything it says, is in English whatever language you use.
+**Where:** open the booking and scroll down. Under **Booking Information**, in
+the left-hand column, there is a card headed **Card payment link (OMISE)**.
+Desktop only: the panel is not on the mobile booking page. The card, and
+everything on it, is in English whatever language you use.
 
-**You must connect Omise first.** Go to Settings, then Payments. Until you do,
-the card shows only this note and no fields:
+![The card payment link panel on a booking, showing the amount field, the For dropdown and a created link with its URL](img/omise-link-panel.png)
+
+**Connect Omise first.** Until you do, the card shows one line and no fields:
 
 > Connect OMISE in Settings → Payment Methods to create card payment links.
 
-and nothing else. If it is connected, you get an **Amount (THB)** field, a **For**
-dropdown with *deposit (50%)* / *balance* / *full (100%)*, and a **Create link**
-button.
+Once connected you get an **Amount (THB)** field, a **For** dropdown with
+*deposit (50%)* / *balance* / *full (100%)*, and a **Create link** button.
 
-**The button starts disabled if the amount is zero.** It prefills from the
-booking: full total, or the deposit, or the remainder. On a booking with no
-total and no deposit that prefill is 0, so type an amount and it enables.
+The amount prefills from the booking: the full total, the deposit, or the
+remainder. **Create link starts disabled if that prefill is zero** — which
+happens on a booking with no total and no deposit. Type an amount and it
+enables.
 
-Anyone who can open bookings can create a link, including agents.
+Anyone who can open a booking can create a link, agents included.
 
-**The one booking you cannot bill is a cancelled one.** The panel says so
-instead of offering the form, and the server refuses it too, so a link cannot be
-made by going around the screen.
+### Nothing is sent to the customer
 
-Everything else can be billed, deliberately. A booking marked **returned late**
-is precisely the one that owes you a late fee. A **completed** long rental can
-still have an instalment outstanding. And a booking already **paid in full** can
-acquire a damage charge after the fact. Those are all real reasons to send a
-customer a card link, so the software does not stand in the way of any of them.
+Pressing **Create link** creates the link and adds it to the list below with its
+URL and a copy button. **No email, no chat message, no SMS goes out.** Copy the
+URL and send it yourself, however you normally talk to that customer.
 
-**What happens on click.** A link is created and appears in the list below with
-its URL and a copy button. **Nothing is sent to the customer.** No email, no
-chat message, no SMS. Copy the URL and send it yourself, however you normally
-talk to that customer.
+### When they pay
 
-**When they pay.** Omise calls us, we re-check the payment against Omise
-directly rather than trusting the message, and then the booking is updated:
-payment method becomes card, the deposit is marked paid, and for a *balance* or
-*full* link the booking is marked verified and moved to Confirmed if it was a
-quote or pending.
+Omise calls us, we re-check the payment against Omise directly rather than
+trusting the message, and then the booking is updated: the payment method
+becomes card, the deposit is marked paid, and a *balance* or *full* link marks
+the booking verified and moves it to Confirmed if it was a quote or pending.
 
-Three things to know about that:
+Three things follow from that:
 
-- **The panel does not refresh on its own.** There is no polling. Reload the
-  booking page to see a link flip from *Awaiting payment* to *Paid*.
+- **The panel refreshes itself** about once a minute while a link is still
+  unpaid, and stops once everything has settled — so a link goes from
+  *Awaiting payment* to *Paid* in front of you, without a reload.
 - **A deposit shows as a deposit.** The badge has three states: *Not paid*,
   *Deposit paid, balance due*, and *Paid in full*. A deposit link moves it to
   the middle one, not the last.
-- **A booking confirmed this way does get its preparation tasks.** They are
-  created unassigned, like the ones from the Confirm button, so somebody still
-  has to hand them out.
+- **A booking confirmed this way gets its preparation tasks.** They are created
+  unassigned, like the ones from the **Confirm** button, so somebody still has
+  to pick them up.
 
 If a payment fails, nothing changes and you are not told. The link simply stays
 *Awaiting payment*.
 
+### The one booking you cannot bill
+
+**A cancelled one.** The panel says so instead of offering the form, and the
+server refuses it too, so a link cannot be made by going around the screen.
+
+Everything else can be billed:
+
+- a booking marked **returned late** is precisely the one that owes you a late
+  fee;
+- a **completed** long rental can still have an instalment outstanding;
+- a booking already **paid in full** can acquire a damage charge after the fact.
+
 ### Connecting Omise
 
-![Payment settings](img/settings-payments.png)
+![Settings, Payment Methods, with the PromptPay, bank transfer and Omise cards](img/settings-payments.png)
 
 **Settings → Payments**, the last card on the page. Owner only.
 
 You need your public key and secret key from the Omise dashboard. The secret is
 encrypted and never shown again after saving. There is an optional **Payment
-Links+** section (an API key and a template ID) if your Omise account has it.
+Links+** section — an API key and a template ID — if your Omise account has it.
 
-**Test keys will connect but will not create links.** The card will show
+**Test keys will connect but will not create links.** The card shows
 *Connected* and *Test*, and then link creation fails against Omise's test
-environment. If you are trialling this, expect that.
+environment.
 
 ---
 
 ## PromptPay and bank transfer
 
 **Settings → Payments**, top of the page: switch each on, then fill in the
-number and the account name. Bank transfer takes bank name, account name,
-account number and branch.
+details. PromptPay takes the number and the account name; bank transfer takes
+bank name, account name, account number and branch.
 
 You do not need to supply a QR image. One is generated from your PromptPay
-number and previewed on the page. There is a "QR Code Image URL" field if you
-want to use your own, but note it is a **web address, not a file upload**: the
+number and previewed on the page. The **QR Code Image URL** field is there if
+you want to use your own, but it is a **web address, not a file upload**: the
 image has to be online somewhere already.
 
-Understand what turning these on actually does: **it makes them appear on your
-online store and in the chat bot's payment menu.** There is no PromptPay or bank
-button on the booking page in the operator app. If you have no online store and
-no bot, switching these on changes nothing a customer will see.
+**Switching these on puts them on your online store**, and PromptPay also
+appears in the chat bot's payment menu; bank transfer is store-only. There is no
+PromptPay or bank-transfer button on the booking page in the operator app, so
+with no store and no bot, switching them on changes
+nothing a customer will see.
 
 Where a customer does meet them:
 
@@ -115,36 +121,47 @@ Where a customer does meet them:
   slip appears on the booking as an image.
 - **Chat bot.** It generates a QR with the exact amount already in it.
 
-**How a slip gets cleared.** A slip paid through the bot is checked
-automatically against the slip service and the booking is marked verified. A
-slip uploaded on the online store waits for you: open the booking, look at the
-image, and press **Approve payment** or **Reject** with a reason. Rejecting
-tells the customer what was wrong; if they upload a replacement, the old
+### Clearing a slip
+
+A slip paid through the bot is checked automatically against the slip service
+and the booking is marked verified.
+
+A slip uploaded on the online store waits for you: open the booking, look at the
+image, and press **Approve payment** or **Reject** with a reason.
+
+![A booking with an uploaded payment slip image and the Approve payment and Reject controls beside it](img/payment-slip.png)
+
+The reason you give is kept on the booking for your own team; it is not sent
+to the customer, so tell them yourself. If they upload a replacement, the old
 rejection is cleared with it.
 
 Owner and manager only, and **on a computer only**: the mobile booking page does
-not have those controls yet.
+not have those controls.
 
 ---
 
 ## Crypto (USDT)
 
-Requires the **Crypto payments** add-on. The customer is offered USDT on TRON in
-the bot's payment menu and gets a one-time address, a QR, the exact amount and a
-memo. The address is valid for about 30 minutes, with a 24-hour grace period
-after that.
+Requires the **Crypto payments** add-on.
 
-This is the only payment method that finishes by itself. The chain is watched,
-and once the payment has enough confirmations the booking is marked paid.
-Nobody has to check anything.
+The customer is offered USDT on TRON in the bot's payment menu and gets a
+one-time address, a QR, the exact amount and a memo. The address is valid for
+about 30 minutes, with a 24-hour grace period after that.
 
-The **Crypto Payments** page in the menu is a read-only ledger: what customers
-paid you in USDT and what has been paid out. There is no crypto button on a
-booking.
+**Nobody has to ask for it and nobody has to check it.** The bot offers the
+address, the chain is watched, and once the payment has enough confirmations the
+booking is marked paid. A card link settles itself too, but somebody still has
+to create it and send it; crypto is the one that runs end to end on its own.
 
-Two caveats: a payment below 95% of the amount shows as **Underpaid** and does
-not credit the booking, and a late payment inside the grace window is recorded
-like an on-time one, so the page will not tell you it was late.
+Two things to know:
+
+- A payment below **95%** of the amount shows as **Underpaid** and does not
+  credit the booking.
+- A late payment inside the grace window is recorded like an on-time one, so the
+  page will not tell you it was late.
+
+**Crypto Payments** in the menu is a read-only ledger: what customers paid you
+in USDT and what has been paid out. There is no crypto button on a booking.
 
 ---
 
@@ -154,11 +171,13 @@ There are exactly two places cash gets recorded.
 
 **The Trips page.** Tap a passenger's paid toggle and pick from *Cash — at
 office*, *Cash — to driver*, *PromptPay — at office*, *Bank transfer — at
-office*. (Computer only; on a phone the toggle records no method.)
+office*. The menu is on the computer; **on a phone the toggle marks them paid
+as "Cash — at office"** without asking. If the money actually came another way,
+set it on a computer.
 
-**Record Payment on a long-term booking.** If the booking is long-term with a
-monthly rate it has a payment schedule, and each instalment can be recorded with
-an amount, a method (cash, card, bank transfer, PromptPay) and a note.
+**Record Payment on a long-term booking.** A long-term booking with a monthly
+rate has a payment schedule, and each instalment can be recorded with an amount,
+a method (cash, card, bank transfer, PromptPay) and a note.
 
 For an ordinary short rental **there is no "record cash payment" control.** The
 booking form asks for the payment method you *expect*, which is a note about
@@ -170,17 +189,15 @@ what you think will happen, not a record that it did.
 
 There is a **Deposit Amount (THB)** field on the booking form. It is optional
 and blank by default. On a long-term rental, saving without one shows a warning
-and lets you save anyway.
+and lets you save anyway. There is no shop-wide default deposit: type it per
+booking.
 
-What the software tracks: whether the deposit was **paid**, and only when the
-payment came through a card link, crypto, or the trips cash toggle.
+What the software tracks is whether the deposit was **paid**, and it learns
+that from a card link, from crypto, from the trips paid toggle, or from a
+marketplace like Viator or Bokun reporting the booking as paid.
 
-Processing a return also records how much of the deposit was kept against a
-late fee and how much goes back, so the figures in that dialog are now written
-down rather than shown and forgotten. Physically handing the money back is still
-yours to do.
-
-There is no shop-wide default deposit: type it per booking.
+**Process Return** records how much of the deposit was kept against a late fee
+and how much goes back. Physically handing the money over is still yours to do.
 
 ---
 
@@ -192,17 +209,13 @@ amount, a method and a note. Owner and manager only.
 
 ---
 
-## There are no invoices, receipts or contracts
+## Invoices, receipts and contracts
 
-This is the most important sentence on this page, because it is the thing people
-assume exists.
-
-The platform does not generate an invoice, a receipt, or a rental contract.
-There is no PDF to send, no document to print, no invoice number, and no place
-to put a tax ID. Quotes taken through the online store produce a reference code
-on screen and an entry in your bookings list, not a document.
+The platform does not generate an invoice, a receipt or a rental contract. There
+is no PDF to send, no document to print, no invoice number, and no place to put
+a tax ID. A quote taken through the online store produces a reference code on
+screen and an entry in your bookings list, not a document. Paperwork your
+customers need is written outside the platform.
 
 The one PDF the system produces is a border-run trip ticket, generated after
 payment for that specific product.
-
-If your customers need paperwork, produce it outside the platform.
