@@ -204,7 +204,7 @@ needs, so you are never left wondering whether you typed it wrong.
 So a payment link can be generated and sent to the customer straight from the
 chat, without switching screens. Today that is PromptPay and USDT; sending a
 **card** link from the conversation is on the roadmap, and until then card links
-are created on the booking page — see [Getting paid](06-getting-paid.md).
+are created on the booking page — see [Getting paid](getting-paid.md).
 
 Three things about `/book` worth knowing before you rely on it:
 

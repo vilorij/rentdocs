@@ -88,7 +88,7 @@ continue.
 ## Money
 
 Card link, PromptPay, bank transfer, crypto, cash: see
-[Getting paid](06-getting-paid.md). Two things to carry into this vertical:
+[Getting paid](getting-paid.md). Two things to carry into this vertical:
 
 - On a short booking there is **no cash-recording button**. The Payment Method
   dropdown on the form is a label for what you expect, not a record that money

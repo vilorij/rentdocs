@@ -134,7 +134,7 @@ On a phone a task becomes a wizard: location, checklist, complete.
 
 Create a card payment link from the booking page and send it, or take cash and
 record it in your own books. The full picture — including what reconciles itself
-and what needs your eye — is in [Getting paid](06-getting-paid.md).
+and what needs your eye — is in [Getting paid](getting-paid.md).
 
 ---
 

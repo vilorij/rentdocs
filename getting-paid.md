@@ -76,7 +76,7 @@ omnichannel inbox, a payment link can be generated and sent from the chat with
 the `/paylink` command, so the customer is asked where they are already talking
 to you. Today that covers PromptPay and USDT; card links from the conversation
 are on the roadmap, and for now they are created here on the booking page. See
-[The inbox and the AI](07-inbox-and-ai.md).
+[The inbox and the AI](inbox-and-ai.md).
 
 ### The one booking you cannot bill
 

@@ -154,7 +154,7 @@ when someone is standing in front of you reading their passport out.
 
 The form collects details; it does not take payment. The deposit appears on it
 as a read-only figure. Money is a separate step: see
-[Getting paid](06-getting-paid.md).
+[Getting paid](getting-paid.md).
 
 ---
 
@@ -176,7 +176,7 @@ wrong number on every seat you sell.
 
 Cash goes through the paid toggle on the Trips page. Card links, crypto,
 PromptPay and what does or does not reconcile itself are all in
-[Getting paid](06-getting-paid.md).
+[Getting paid](getting-paid.md).
 
 Two things specific to trips:
 

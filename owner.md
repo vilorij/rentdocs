@@ -38,7 +38,7 @@ One setting: the **Default Agent Commission** your agents earn.
 ### Settings → Payments
 
 At minimum, decide whether you are taking cards and connect Omise if you are.
-Everything else about money is in [Getting paid](06-getting-paid.md).
+Everything else about money is in [Getting paid](getting-paid.md).
 
 ### Settings → Task checklists
 
@@ -98,7 +98,7 @@ your business.
 ![Plan and add-ons, with each add-on priced and a Buy button](img/settings-billing-addons.png)
 
 **Settings → Plan & billing → Add-ons.** The list, the prices and what each one
-does are in [the overview](01-what-the-platform-does.md#add-ons).
+does are in [the overview](what-the-platform-does.md#add-ons).
 
 One dependency decides whether an add-on does anything for you: **every AI
 add-on requires the Omnichannel inbox.** Buying the assistant without the inbox
@@ -158,7 +158,7 @@ your time: the bot answers only from what you write there and refuses to guess,
 so a thin knowledge base produces a bot that constantly says it does not know.
 
 Full detail, including how to take a conversation over from the bot and where
-co-pilot commands go, is in [The inbox and the AI](07-inbox-and-ai.md).
+co-pilot commands go, is in [The inbox and the AI](inbox-and-ai.md).
 
 ---
 
@@ -231,6 +231,6 @@ spendable but never withdrawable.
 ## Before your trial runs out
 
 Read
-[Plans, the trial, and getting into your account](10-plans-trial-and-accounts.md).
+[Plans, the trial, and getting into your account](plans-and-accounts.md).
 When a trial expires your account goes read-only: everything still opens, but
 nothing saves until you pick a plan.

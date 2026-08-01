@@ -8,33 +8,33 @@ hero:
   actions:
     - theme: brand
       text: Start here
-      link: /01-what-the-platform-does
+      link: /what-the-platform-does
     - theme: alt
       text: A day in the life
-      link: /02-day-vehicle-rental
+      link: /vehicle-rental
     - theme: alt
       text: Where do I turn that on?
-      link: /08-where-do-i-turn-that-on
+      link: /where-do-i-turn-that-on
 
 features:
   - title: Vehicle rental
     details: Fleet, bookings, the three jobs that appear when you confirm, and returns.
-    link: /02-day-vehicle-rental
+    link: /vehicle-rental
   - title: Trips and tours
     details: Destinations, boats, the daily manifest, and marking people paid.
-    link: /03-day-trips
+    link: /trips
   - title: Property rental
     details: Properties, arrivals, departures and long stays.
-    link: /04-day-property
+    link: /property
   - title: Getting paid
     details: Card links, PromptPay, crypto, cash. Which of them reconcile themselves and which do not.
-    link: /06-getting-paid
+    link: /getting-paid
   - title: The inbox and the AI
     details: Connecting channels, where the bot writes, and how to take a conversation over.
-    link: /07-inbox-and-ai
+    link: /inbox-and-ai
   - title: Where do I turn that on?
     details: A lookup table for the questions people ask most.
-    link: /08-where-do-i-turn-that-on
+    link: /where-do-i-turn-that-on
 ---
 
 ## The guided setup
@@ -58,12 +58,12 @@ it. **Restart tour** on that card runs it again.
 ## Where to start
 
 If you are setting the shop up, start with
-[A day as the owner](/05-day-owner) — it walks the settings in the order you
+[A day as the owner](/owner) — it walks the settings in the order you
 will need them.
 
 If the shop is already running and you work in it, go straight to your day:
-[vehicle rental](/02-day-vehicle-rental), [trips and tours](/03-day-trips) or
-[property rental](/04-day-property).
+[vehicle rental](/vehicle-rental), [trips and tours](/trips) or
+[property rental](/property).
 
-And [Where do I turn that on?](/08-where-do-i-turn-that-on) is the page to
+And [Where do I turn that on?](/where-do-i-turn-that-on) is the page to
 search when you know what you want and not where it lives.

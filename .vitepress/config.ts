@@ -14,6 +14,12 @@ import { defineConfig } from 'vitepress'
  * back to vilorij.github.io/rentdocs/, DOCS_BASE would have to be set to
  * '/rentdocs/' or the site would load with no CSS.
  *
+ * Page files carry NO number prefix, and the order lives in the sidebar below.
+ * The app and the marketing pages link into these URLs from outside, where a
+ * broken link fails silently — VitePress only checks links between its own
+ * pages. A slug that never has to change because something was inserted above
+ * it is worth more than a filename that sorts.
+ *
  * This repository is PUBLIC. The catalogue of what the product cannot do yet is
  * deliberately not here — it lives with the team, in `plans/known-limits.md`.
  * Pages here still say plainly where a screen implies something it does not do;
@@ -37,36 +43,36 @@ export default defineConfig({
     search: { provider: 'local' },
 
     nav: [
-      { text: 'Start here', link: '/01-what-the-platform-does' },
-      { text: 'A day in the life', link: '/02-day-vehicle-rental' },
-      { text: 'Reference', link: '/06-getting-paid' },
+      { text: 'Start here', link: '/what-the-platform-does' },
+      { text: 'A day in the life', link: '/vehicle-rental' },
+      { text: 'Reference', link: '/getting-paid' },
     ],
 
     sidebar: [
       {
         text: 'Start here',
         items: [
-          { text: 'What the platform does', link: '/01-what-the-platform-does' },
+          { text: 'What the platform does', link: '/what-the-platform-does' },
         ],
       },
       {
         text: 'A day in the life',
         collapsed: false,
         items: [
-          { text: 'Vehicle rental', link: '/02-day-vehicle-rental' },
-          { text: 'Trips and tours', link: '/03-day-trips' },
-          { text: 'Property rental', link: '/04-day-property' },
-          { text: 'The owner', link: '/05-day-owner' },
+          { text: 'Vehicle rental', link: '/vehicle-rental' },
+          { text: 'Trips and tours', link: '/trips' },
+          { text: 'Property rental', link: '/property' },
+          { text: 'The owner', link: '/owner' },
         ],
       },
       {
         text: 'Reference',
         collapsed: false,
         items: [
-          { text: 'Getting paid', link: '/06-getting-paid' },
-          { text: 'The inbox and the AI', link: '/07-inbox-and-ai' },
-          { text: 'Where do I turn that on?', link: '/08-where-do-i-turn-that-on' },
-          { text: 'Plans, trial and accounts', link: '/10-plans-trial-and-accounts' },
+          { text: 'Getting paid', link: '/getting-paid' },
+          { text: 'The inbox and the AI', link: '/inbox-and-ai' },
+          { text: 'Where do I turn that on?', link: '/where-do-i-turn-that-on' },
+          { text: 'Plans, trial and accounts', link: '/plans-and-accounts' },
         ],
       },
     ],

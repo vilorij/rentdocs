@@ -136,10 +136,10 @@ Viator are never auto-granted.
 
 ## Where to go next
 
-- [A day with vehicle rental](02-day-vehicle-rental.md)
-- [A day with trips and tours](03-day-trips.md)
-- [A day with property rental](04-day-property.md)
-- [A day as the owner](05-day-owner.md)
-- [Getting paid](06-getting-paid.md): including the card payment link
-- [The inbox and the AI](07-inbox-and-ai.md)
-- [Plans, the trial, and getting into your account](10-plans-trial-and-accounts.md)
+- [A day with vehicle rental](vehicle-rental.md)
+- [A day with trips and tours](trips.md)
+- [A day with property rental](property.md)
+- [A day as the owner](owner.md)
+- [Getting paid](getting-paid.md): including the card payment link
+- [The inbox and the AI](inbox-and-ai.md)
+- [Plans, the trial, and getting into your account](plans-and-accounts.md)

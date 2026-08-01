@@ -71,7 +71,7 @@ every plan. They are not exclusive.
 Inside a conversation in the **Inbox**, in the **private note** tab, the internal
 note area your customer cannot see. There is no command box anywhere in the rest
 of the app. The commands are `/summarize`, `/draft`, `/book` and `/help`. Needs
-the AI co-pilot add-on. See [The inbox and the AI](07-inbox-and-ai.md).
+the AI co-pilot add-on. See [The inbox and the AI](inbox-and-ai.md).
 
 **"How do I stop the bot replying to this customer?"**
 Set the conversation to **open**. The bot goes quiet on it and stays quiet until
@@ -81,7 +81,7 @@ somebody resolves the conversation.
 On a booking page, in the left column under Booking Information. It is on the phone layout too.
 It only works once Omise is connected at Settings → Payments. (The menu entry
 says "Payments"; the page heading says "Payment Methods". Same page.)
-See [Getting paid](06-getting-paid.md).
+See [Getting paid](getting-paid.md).
 
 **"How do customers find my online store?"**
 Turn it on at Settings → E-Shop; your address is `yoursubdomain.ranchao.app` and
@@ -112,4 +112,4 @@ replaces the built-in set for that kind, so you get exactly what you configured.
 **"Where do I print an invoice?"**
 Not yet — invoices, receipts and contracts are on the roadmap. Produce them
 outside the platform for now, and tell us what you need: it shapes what gets
-built first. See [Getting paid](06-getting-paid.md).
+built first. See [Getting paid](getting-paid.md).
