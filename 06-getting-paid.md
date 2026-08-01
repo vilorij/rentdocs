@@ -28,7 +28,8 @@ everything on it, is in English whatever language you use.
 
 ![The card payment link panel on a booking, showing the amount field, the For dropdown and a created link with its URL](img/omise-link-panel.png)
 
-**Connect Omise first.** Until you do, the card shows one line and no fields:
+**[Connect Omise](#connecting-omise) first.** Until you do, the card shows one
+line and no fields:
 
 > Connect OMISE in Settings → Payment Methods to create card payment links.
 
@@ -69,6 +70,12 @@ Three things follow from that:
 
 If a payment fails, nothing changes and you are not told. The link simply stays
 *Awaiting payment*.
+
+**Asking for money without leaving the conversation.** If you have the
+omnichannel inbox, a PromptPay QR or a USDT request can be sent straight into
+the chat with the `/paylink` command, so the customer is asked where they are
+already talking to you. Card links stay here on the booking page. See
+[The inbox and the AI](07-inbox-and-ai.md).
 
 ### The one booking you cannot bill
 

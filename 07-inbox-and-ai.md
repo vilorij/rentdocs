@@ -13,6 +13,17 @@ have connected. Your whole team works from it, so a customer who wrote on
 WhatsApp yesterday and Instagram today is one conversation thread, and whoever
 is on shift can answer.
 
+That shared part is the point, and it is worth being deliberate about. Talking
+to customers from the Inbox rather than from personal phones means:
+
+- **Nobody hands out their own Telegram or WhatsApp.** Staff answer through the
+  shop's channels, and when somebody leaves, the conversations stay.
+- **Owners, managers and agents all see the same threads.** You decide who is
+  an agent; anyone who is gets the Inbox.
+- **A conversation is attached to its booking**, so the person picking it up
+  reads what was agreed instead of asking the customer to repeat it.
+- **The money can be asked for in the same window** — see below.
+
 The red number on the Inbox menu item is your count of open conversations. It
 refreshes about every 45 seconds. It is on the desktop sidebar only.
 
@@ -170,7 +181,14 @@ needs, so you are never left wondering whether you typed it wrong.
 | `/summarize` | A private note summarising the whole conversation: what they want, dates, party size, pickup, open questions. It will not invent anything that was not said |
 | `/draft` | A suggested customer-facing reply, as a private note. Copy it, edit it, send it yourself. Add a hint after the command to steer it, for example `/draft offer the Tuesday boat` |
 | `/book` | Reads the conversation and creates a **draft** booking, then gives you a link to review and confirm it |
+| `/paylink qr` | Sends the customer a **PromptPay QR** for the amount, right in the conversation. `/paylink qr 1400` to name the figure |
+| `/paylink crypto` | The same, in **USDT (TRC-20)**: address, amount and a QR |
 | `/help` | Lists the commands your account can actually run |
+
+So the money can be asked for without leaving the conversation. Note which is
+which: `/paylink` sends **PromptPay or crypto** into the chat, while a **card**
+payment link is created on the booking page — see
+[Getting paid](06-getting-paid.md).
 
 Three things about `/book` worth knowing before you rely on it:
 

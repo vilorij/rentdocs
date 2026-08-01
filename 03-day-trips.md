@@ -59,7 +59,12 @@ recorded is simply left out of the vans — which is right for a guest making
 their own way to the pier, and a silent omission if you meant to collect them.
 **Show on map** draws the same plan, one colour per van.
 
-**Mark people paid.** On a computer the toggle opens a **Mark paid as…** menu:
+**Mark people paid.** Each row carries where the booking came from, how it was
+paid, its status and whether the money has arrived.
+
+![The passenger list: name and source, phone, destination with its boat and pickup time, the booking status and a Paid or Unpaid badge](img/trips-passengers.png)
+
+On a computer the toggle opens a **Mark paid as…** menu:
 *Cash — at office*, *Cash — to driver*, *PromptPay — at office*, *Bank transfer
 — at office*. On a phone the toggle skips the menu and records
 **Cash — at office**. If the money came another way, set it on a computer.
@@ -158,7 +163,7 @@ as a read-only figure. Money is a separate step: see
 Both are under **Settings → Integrations**, as extra tabs that appear only for
 this vertical.
 
-**Viator** is a paid add-on (฿1,490/month). Bookings that come in through it
+**Viator** is a separate paid add-on. Bookings that come in through it
 arrive already confirmed.
 
 Set your **net** and **retail** prices properly before you connect anything: the
