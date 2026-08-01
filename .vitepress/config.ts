@@ -31,6 +31,11 @@ export default defineConfig({
   lang: 'en',
   base: process.env.DOCS_BASE || '/',
   cleanUrls: true,
+  // README addresses whoever edits this repository, not whoever reads the site.
+  // Without this it builds as a page and lands in the sitemap.
+  srcExclude: ['README.md'],
+  // Tell search engines what exists. VitePress writes sitemap.xml at build.
+  sitemap: { hostname: 'https://docs.ranchao.app' },
   lastUpdated: true,
   // The docs are written for shop owners, not developers: a broken link is a
   // dead end for someone looking for an answer, so fail the build on one.
