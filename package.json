@@ -1,0 +1,15 @@
+{
+  "name": "bikerental-docs",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "description": "User documentation site. Deliberately separate from the app: VitePress drags a React 18 subtree in through @docsearch, which broke the app's `npm ci` in CI, and the production image has no business installing a docs toolchain.",
+  "scripts": {
+    "dev": "vitepress dev .",
+    "build": "vitepress build .",
+    "preview": "vitepress preview ."
+  },
+  "devDependencies": {
+    "vitepress": "^1.6.4"
+  }
+}
