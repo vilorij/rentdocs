@@ -119,9 +119,12 @@ The fields that matter:
   - *Create an order (BOOKING)*: it can quote and create an order. **This one
     needs the AI booking bot add-on.** Without it the bot falls back to
     capturing the lead instead. A note under the setting tells you so.
-- **What the bot collects**: the fields it should get out of a conversation:
+- **What the bot collects**: the fields it should get out of a conversation —
   date, number of people, destination, venue, dietary needs, budget, pickup
-  point, phone, their questions. Mark the ones that are required.
+  point, phone, their questions — plus any of your own you add. Tick the ones
+  that are **required**: the bot gathers those before it captures the lead or
+  makes the order, and asks *"anything else?"* before it wraps up. Leave every
+  box unticked for a bot that only answers questions.
 - **Greeting line** and **Routing description**: the opening message, and how
   this profile is chosen when you have several.
 - **Enabled**: a switch per profile.
@@ -180,22 +183,25 @@ needs, so you are never left wondering whether you typed it wrong.
 |---|---|
 | `/summarize` | A private note summarising the whole conversation: what they want, dates, party size, pickup, open questions. It will not invent anything that was not said |
 | `/draft` | A suggested customer-facing reply, as a private note. Copy it, edit it, send it yourself. Add a hint after the command to steer it, for example `/draft offer the Tuesday boat` |
-| `/book` | Reads the conversation and creates a **draft** booking, then gives you a link to review and confirm it |
+| `/book` | Reads the conversation and creates a **draft** booking, then gives you a link to review and confirm it. Add the kind when you run more than one vertical: `/book rental`, `/book property`, `/book trip` |
 | `/paylink qr` | Sends the customer a **PromptPay QR** for the amount, right in the conversation. `/paylink qr 1400` to name the figure |
 | `/paylink crypto` | The same, in **USDT (TRC-20)**: address, amount and a QR |
 | `/help` | Lists the commands your account can actually run |
 
-So the money can be asked for without leaving the conversation. Note which is
-which: `/paylink` sends **PromptPay or crypto** into the chat, while a **card**
-payment link is created on the booking page — see
-[Getting paid](06-getting-paid.md).
+So a payment link can be generated and sent to the customer straight from the
+chat, without switching screens. Today that is PromptPay and USDT; sending a
+**card** link from the conversation is on the roadmap, and until then card links
+are created on the booking page — see [Getting paid](06-getting-paid.md).
 
 Three things about `/book` worth knowing before you rely on it:
 
-- It only works for **trips** today. `/book rental` and `/book property` answer
-  that they are not wired up yet.
-- It refuses rather than guesses. Without a date and a name it tells you to ask
-  the guest and try again.
+- **It refuses rather than guesses.** Without the dates and a name it tells you
+  what is still missing and waits. If the chat says "a scooter" and you have
+  four, it lists them and asks which — booking one at random would be a
+  confident, plausible, wrong answer, and nobody would think to check it.
+- **What it could not read, it flags.** The draft comes back with a note saying
+  which parts to check: a phone taken from the chat contact rather than said
+  out loud, a pickup address it could not put on the map.
 - **It is not idempotent.** Running it twice creates two draft bookings.
 
 Everything the co-pilot writes goes into the private note thread, so a customer

@@ -110,5 +110,6 @@ automatically and for which kind of booking. Configuring one for a booking kind
 replaces the built-in set for that kind, so you get exactly what you configured.
 
 **"Where do I print an invoice?"**
-You cannot. There is no invoice, receipt or contract in the product yet. If your
-customers need paperwork, produce it outside the platform.
+Not yet — invoices, receipts and contracts are on the roadmap. Produce them
+outside the platform for now, and tell us what you need: it shapes what gets
+built first. See [Getting paid](06-getting-paid.md).

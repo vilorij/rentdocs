@@ -72,9 +72,10 @@ If a payment fails, nothing changes and you are not told. The link simply stays
 *Awaiting payment*.
 
 **Asking for money without leaving the conversation.** If you have the
-omnichannel inbox, a PromptPay QR or a USDT request can be sent straight into
-the chat with the `/paylink` command, so the customer is asked where they are
-already talking to you. Card links stay here on the booking page. See
+omnichannel inbox, a payment link can be generated and sent from the chat with
+the `/paylink` command, so the customer is asked where they are already talking
+to you. Today that covers PromptPay and USDT; card links from the conversation
+are on the roadmap, and for now they are created here on the booking page. See
 [The inbox and the AI](07-inbox-and-ai.md).
 
 ### The one booking you cannot bill
@@ -218,11 +219,13 @@ amount, a method and a note. Owner and manager only.
 
 ## Invoices, receipts and contracts
 
-The platform does not generate an invoice, a receipt or a rental contract. There
-is no PDF to send, no document to print, no invoice number, and no place to put
-a tax ID. A quote taken through the online store produces a reference code on
-screen and an entry in your bookings list, not a document. Paperwork your
-customers need is written outside the platform.
+Document generation — invoices, receipts, rental contracts — is on the roadmap
+and not built yet. For now a quote taken through the online store gives you a
+reference code on screen and an entry in your bookings list rather than a
+document, and paperwork your customers need is written outside the platform.
 
-The one PDF the system produces is a border-run trip ticket, generated after
-payment for that specific product.
+The one PDF the system produces today is the trip ticket, generated after
+payment for that product.
+
+If your customers need particular paperwork, tell us what and in what shape —
+that is what decides the order this gets built in.
