@@ -3,7 +3,7 @@
 The working manual for running a shop on Ranchao. VitePress, published to
 GitHub Pages on every push to `master`.
 
-**Live:** https://vilorij.github.io/rentdocs/
+**Live:** https://docs.ranchao.app
 
 ```
 npm install
@@ -38,10 +38,17 @@ only from `master`. A pull request that breaks the site fails before merge.
 `ignoreDeadLinks` is off on purpose: a broken link is a dead end for somebody
 looking for an answer, so it fails the build rather than shipping.
 
-The site is served under `/rentdocs/`, and `DOCS_BASE` in the workflow sets
-VitePress's `base` to match — get that wrong and the site loads with no styling.
-Point a custom domain at it (a `CNAME` file plus the DNS record) and `DOCS_BASE`
-becomes `/`.
+The domain comes from `public/CNAME`, which VitePress copies into the build.
+It has to end up in the artifact rather than sit at the repository root: this
+deploys through Actions, so only what is in the artifact reaches the site.
+(`.vitepress/public/` is not the public directory — the project root's is.)
+
+`base` is therefore `/`. If the custom domain is ever dropped, Pages falls back
+to `vilorij.github.io/rentdocs/` and the workflow needs `DOCS_BASE: /rentdocs/`
+again — every asset URL is built from it, so getting it wrong serves the site
+with no styling.
+
+DNS: `docs` CNAME `vilorij.github.io.`
 
 ## Where these came from
 

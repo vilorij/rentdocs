@@ -30,11 +30,11 @@ jobs:
 
       - run: npm ci
 
-      # Pages serves this under /rentdocs/, not a domain root. Without the
-      # matching base every asset URL is wrong and the site loads unstyled.
+      # Served from the root of docs.ranchao.app, so no base prefix. If the
+      # custom domain is ever dropped, Pages falls back to
+      # vilorij.github.io/rentdocs/ and this has to become DOCS_BASE: /rentdocs/
+      # or every asset URL is wrong and the site loads unstyled.
       - run: npm run build
-        env:
-          DOCS_BASE: /rentdocs/
 
       - uses: actions/upload-pages-artifact@v3
         if: github.event_name != 'pull_request'

@@ -8,10 +8,11 @@ import { defineConfig } from 'vitepress'
  *   npm run build     -> .vitepress/dist
  *   npm run preview   serve the built site locally
  *
- * `base` matters because Pages serves this under /rentdocs/ rather than a
- * domain root: every asset URL is built from it, and getting it wrong gives a
- * page that loads with no CSS. The workflow sets DOCS_BASE. Point a custom
- * domain at the site and it becomes '/' again.
+ * `base` is '/' because the site is served from the root of its own domain
+ * (docs.ranchao.app, set by .vitepress/public/CNAME). It matters: every asset
+ * URL is built from it, so if the custom domain were dropped and Pages fell
+ * back to vilorij.github.io/rentdocs/, DOCS_BASE would have to be set to
+ * '/rentdocs/' or the site would load with no CSS.
  *
  * This repository is PUBLIC. The catalogue of what the product cannot do yet is
  * deliberately not here — it lives with the team, in `plans/known-limits.md`.
