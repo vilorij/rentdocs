@@ -119,12 +119,25 @@ The fields that matter:
   - *Create an order (BOOKING)*: it can quote and create an order. **This one
     needs the AI booking bot add-on.** Without it the bot falls back to
     capturing the lead instead. A note under the setting tells you so.
-- **What the bot collects**: the fields it should get out of a conversation —
-  date, number of people, destination, venue, dietary needs, budget, pickup
-  point, phone, their questions — plus any of your own you add. Tick the ones
-  that are **required**: the bot gathers those before it captures the lead or
-  makes the order, and asks *"anything else?"* before it wraps up. Leave every
-  box unticked for a bot that only answers questions.
+- **What the bot collects.** Two separate decisions, and it is worth keeping
+  them apart:
+
+  1. **Tick a field** to say the bot should gather it at all — date, number of
+     people, destination, venue, dietary needs, budget, pickup point, phone,
+     their questions. **Add custom field** covers anything of your own: give it
+     a label and the bot will ask for it.
+  2. Once a field is ticked, a **required** switch appears beside it. Leave it
+     off and the field is nice-to-have: the bot takes the answer if it comes up
+     and does not chase it. Turn it on and the bot **will not finish without
+     it** — it keeps asking, and only captures the lead or creates the order
+     once every required field is answered. It also asks *"anything else?"*
+     before wrapping up.
+
+  Mark as required only what you genuinely cannot work without. Each one is
+  another thing the customer has to answer before anything is recorded, and a
+  long list of them is how a chat gets abandoned halfway.
+
+  Leave every box unticked for a bot that only answers questions.
 - **Greeting line** and **Routing description**: the opening message, and how
   this profile is chosen when you have several.
 - **Enabled**: a switch per profile.
