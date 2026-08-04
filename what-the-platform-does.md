@@ -44,8 +44,8 @@ a manager can invite agents and employees only.
 
 | Role | What they see |
 |---|---|
-| **Owner** | Everything, including Settings, Outreach and Lead-gen |
-| **Manager** | Everything operational. No Settings, no Outreach, no Lead-gen |
+| **Owner** | Everything, including Settings |
+| **Manager** | Everything operational. No Settings |
 | **Agent** | Dashboard, Tasks, Trips, Inbox, Bookings, Customers. Their own bookings only |
 | **Employee** | Dashboard and Tasks only |
 | **Vehicle Owner** | Dashboard and Reports only |
@@ -62,7 +62,7 @@ change the payment details", that is why.
 
 Most of the day happens on a phone, so the layout changes below 768px wide.
 
-**Bottom bar:** Tasks, then Inbox / Outreach / Shop if you have them, then a
+**Bottom bar:** Tasks, then Inbox and Shop if you have them, then a
 **Rentals** button, then **More**.
 
 - **Rentals** opens a grid with Bookings, Trips, Vehicles, Owners, Partners,
@@ -114,23 +114,17 @@ is bought separately, at **Settings → Plan & billing → Add-ons**.
 | **AI co-pilot** | 890 | Commands your staff type while handling a chat | Buy it yourself, Business plan |
 | **Crypto payments** | 99 | Accept USDT on TRON | Buy it yourself |
 | **Viator & TripAdvisor** | 1,490 | Sell your trips through Viator | Buy it yourself |
-| **Outreach campaigns** | 490 | Cold outreach over your connected channels | Ask us to switch it on |
-| **Lead-gen monitor** | 990 | Watch Telegram chats for buying intent | Ask us to switch it on |
 
-Two things decide whether an add-on will actually do anything for you.
+One thing decides whether an AI add-on will actually do anything for you.
 
 **None of the AI add-ons run without the Omnichannel inbox.** The assistant, the
 booking bot and the co-pilot all read and write through the inbox, so if the
 inbox is off they are switched off with it regardless of what you have paid for.
 The Integrations page says so in an amber notice if you get there first.
 
-**Outreach and Lead-gen are not in the self-serve list.** They are switched on
-for you on request, because both send messages from your own accounts and both
-need a short conversation about how to do that without getting a number banned.
-
 On a free trial the inbox, the AI assistant, the booking bot, the co-pilot and
-crypto are switched on automatically so you can try them. Outreach, lead-gen and
-Viator are never auto-granted.
+crypto are switched on automatically so you can try them. Viator is never
+auto-granted.
 
 ---
 

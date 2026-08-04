@@ -66,7 +66,7 @@ shared job list rather than a set of private inboxes.
 
 ![The team list with the invite dialog open on the role picker](img/users-invite.png)
 
-- **Manager**: runs the shop. Everything except Settings, Outreach and Lead-gen.
+- **Manager**: runs the shop. Everything except Settings.
 - **Agent**: sells. Sees their own bookings; can create bookings and customers.
 - **Employee**: does the jobs. Dashboard and Tasks only.
 
@@ -106,7 +106,7 @@ buys you nothing that runs. The Integrations page warns about this, but it is
 worth knowing before you spend.
 
 On a trial the inbox, both AI tiers, the co-pilot and crypto are switched on for
-you. Outreach, lead-gen and Viator are not.
+you. Viator is not.
 
 ---
 
@@ -180,37 +180,7 @@ and agents.
 
 ---
 
-## Growth tools
-
-**Outreach** and **Lead-gen** are switched on by us on request rather than
-bought at checkout, because both send from your own accounts and the pacing
-matters more than the price. Both are owner-only.
-
-### Outreach
-
-Cold outreach over WhatsApp. You import contacts from a CSV, their reachability
-is checked in the background, and you build a campaign in three steps: audience,
-message, schedule.
-
-The rate settings are the important part: a minimum gap between messages (the
-wizard refuses anything under 30 seconds), a daily cap, and a sending window.
-Write two or three variations of your message, because identical text sent to
-many people is what gets a number flagged.
-
-Replies land in your normal **Inbox** as ordinary conversations, and the AI bot
-is deliberately kept out of them so a human answers a cold reply.
-
-Two limits to plan around: there is **no opt-out or unsubscribe list**, so keep
-your own; and the daily cap resets at midnight UTC, not your local midnight.
-
-### Lead-gen
-
-Watches Telegram group chats for people expressing buying intent, qualifies them
-with the AI against a description of your product, and forwards the good ones
-into a Telegram group of yours, plus a list in the app. It does not create
-customers, tasks or inbox threads: leads arrive in that group and nowhere else.
-
-### Referrals
+## Referrals
 
 **Bonus account**, in the top bar on desktop, is the referral programme. Your
 link is `ranchao.app/signup?ref=YOURCODE`, and you earn **10% of everything a

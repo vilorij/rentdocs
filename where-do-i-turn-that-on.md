@@ -24,16 +24,12 @@ the button says **Keep it**.
 
 The three AI add-ons need the Business plan to buy.
 
-**Outreach campaigns (฿490) and Lead-gen monitor (฿990) are not in this list.**
-Ask us and we switch them on. Both send from your own messaging accounts, so
-they start with a conversation about pacing rather than a checkout.
-
 **The AI add-ons do nothing without the Omnichannel inbox.** The assistant, the
 booking bot and the co-pilot all live inside the inbox. If it is off, they are
 off. The Integrations page shows an amber notice about this.
 
 On a free trial, the inbox, both AI tiers, the co-pilot and crypto are switched
-on for you. Outreach, lead-gen and Viator are not.
+on for you. Viator is not.
 
 ---
 
@@ -90,7 +86,7 @@ properties and trips — and an order arriving there notifies nobody, so someone
 has to watch the bookings list. It does leave a task, so it is not invisible.
 
 **"Why can't my manager see Settings?"**
-By design. Settings, Outreach and Lead-gen are owner-only.
+By design. Settings is owner-only.
 
 **"Why is my employee's task list empty?"**
 An employee sees only tasks assigned to them, and the tasks created when you
