@@ -47,12 +47,75 @@ later."*, the usual cause is that the add-on is not active on your account.
 | **Facebook & Instagram** | A Facebook login | Press **Connect Facebook Page**, authorise in the popup, pick the page. Instagram must be a Business account linked to a Page |
 | **Bokun** | Bokun credentials | Trips only |
 | **Viator** | Viator credentials | Trips only, paid add-on |
-| **LINE** | nothing yet | Shown in the list but disabled |
+| **LINE** | Two values from your LINE Official Account | See [Connecting LINE](#connecting-line) below — it has a few more steps than the others |
 
 Connecting a channel and *reading* it are two different purchases. Without the
 inbox add-on you can still connect Telegram or WhatsApp for the bot, but there
 is no shared inbox to read them in, and the Integrations page shows an amber
 notice saying exactly that.
+
+---
+
+## Connecting LINE
+
+LINE is the one channel that asks for more than a button, so it gets its own
+section. Two things to know before you start.
+
+**You keep your personal LINE.** A LINE Official Account is a separate account
+with its own `@id`. Your own LINE stays exactly as it is — same phone, same
+friends, same chats — and you manage the Official Account with the same login.
+Nothing is taken away from you, unlike a WhatsApp Business number.
+
+**An Official Account is free.** The unverified kind — a grey badge — costs
+nothing, takes minutes, and needs no company registration. It has the full
+messaging feature set. The paid blue badge only makes you findable by name in
+LINE's search; customers can always add you by QR code or link, which you can
+put on your shop page, in booking confirmations and in your OTA profile.
+
+### The five steps
+
+1. **Create the Official Account** at
+   [manager.line.biz](https://manager.line.biz/) — sign in with your existing
+   LINE account.
+2. **Turn the Messaging API on.** In the Official Account Manager: **Settings →
+   Messaging API → Enable**. The first time it asks for a developer name and
+   email.
+3. **Copy the channel secret.** At
+   [developers.line.biz/console](https://developers.line.biz/console/), open the
+   channel that just appeared → **Basic settings** tab → *Channel secret*.
+4. **Issue an access token.** Same channel → **Messaging API** tab → *Channel
+   access token* → **Issue**. Copy it. (Issuing a new one later invalidates the
+   old one, and you would have to paste the new one here.)
+5. **Paste both here** — Settings → Integrations → LINE → **Connect LINE**.
+
+We do the rest: we set your webhook address on the channel and ask LINE to send
+a real test event, so the page tells you it works before you leave it.
+
+### The one switch we cannot flip for you
+
+In the **Official Account Manager → Settings → Response settings**:
+
+- **Webhook** must be **on**. It is off by default, and it is the single most
+  common reason nothing arrives.
+- **Auto-response messages** should be **off**. Otherwise LINE answers with its
+  own canned reply before we ever see the message, and it looks like your bot
+  is ignoring people.
+
+The LINE tab reads both of these back from LINE and names whichever one is
+wrong, so you do not have to remember this list. Press **Check connection**
+after changing anything.
+
+### What works, and what does not yet
+
+Customer chats with your Official Account arrive in the inbox and replies go
+back — from you or from the bot, the same as any other channel. Photos a
+customer sends arrive as attachments.
+
+**Group chats are not connected yet.** If your team coordinates in a LINE group,
+that group does not appear in the inbox. It is a separate build.
+
+**We cannot send documents.** LINE has no file message type at all, so a PDF
+attachment is dropped and only the text goes out. Photos are fine.
 
 ---
 
@@ -79,15 +142,19 @@ taken a conversation, it is the human's until they resolve it.
 
 ### Business hours for the bot
 
-**Settings → Integrations → "When the bot is active"**. Set a window and a
-timezone. Leave the schedule off to answer everything manually.
+**Settings → Integrations → "When the bot is active"**. Three choices:
+
+- **Always** — the AI answers around the clock.
+- **On a schedule** — it answers inside the hours you set, in the timezone you
+  set. Outside them a chat waits for your team.
+- **Off** — the AI never answers. Every chat goes to a human.
 
 Be clear about what "outside the window" does: **the bot stays silent and the
 chat is left open in the inbox.** No automatic reply is sent, nobody is
 assigned, and nobody is notified. Someone has to be watching.
 
 You can also switch the bot on or off per channel in the **Bot engagement**
-card on the same page: WhatsApp, Telegram, Instagram, Messenger.
+card on the same page: WhatsApp, Telegram, Instagram, Messenger, LINE.
 
 ### When the AI fails
 
