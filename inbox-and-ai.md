@@ -81,29 +81,58 @@ put on your shop page, in booking confirmations and in your OTA profile.
    Messaging API → Enable**. The first time it asks for a developer name and
    email.
 3. **Copy the channel secret.** At
-   [developers.line.biz/console](https://developers.line.biz/console/), open the
-   channel that just appeared → **Basic settings** tab → *Channel secret*.
+   [developers.line.biz/console](https://developers.line.biz/console/) you land
+   on a list of **providers**, not on your channel. Click your provider, then
+   the channel inside it, then the **Basic settings** tab → *Channel secret*.
+   Copy it and paste it into the first field on our LINE tab.
 4. **Issue an access token.** Same channel → **Messaging API** tab → *Channel
-   access token* → **Issue**. Copy it. (Issuing a new one later invalidates the
-   old one, and you would have to paste the new one here.)
-5. **Paste both here** — Settings → Integrations → LINE → **Connect LINE**.
+   access token (long-lived)* → **Issue**. Copy it and paste it into the second
+   field. (Issuing a new one later invalidates the old one, and you would have
+   to paste the new one here.)
+5. **Press Connect LINE.**
+
+The two values live on two different tabs, so you will be going back and forth
+between LINE and this page. That is normal — paste each one as you find it.
 
 We do the rest: we set your webhook address on the channel and ask LINE to send
 a real test event, so the page tells you it works before you leave it.
 
-### The one switch we cannot flip for you
+### The switches we cannot flip for you
 
-In the **Official Account Manager → Settings → Response settings**:
+While you are on that **Messaging API** tab, you will see a block called *LINE
+Official Account features* with **Edit** links. Those links open **Response
+settings** in the Official Account Manager — a different site, which is why it
+is easy to miss.
 
-- **Webhook** must be **on**. It is off by default, and it is the single most
-  common reason nothing arrives.
-- **Auto-response messages** should be **off**. Otherwise LINE answers with its
-  own canned reply before we ever see the message, and it looks like your bot
-  is ignoring people.
+![Response settings in the LINE Official Account Manager: Chat on, Greeting message off, Webhooks on, and the response method set to Manual chat](img/line-response-settings.png)
 
-The LINE tab reads both of these back from LINE and names whichever one is
-wrong, so you do not have to remember this list. Press **Check connection**
-after changing anything.
+**Webhooks must be on.** This is the one that matters. If it is off, nothing
+reaches us at all and the connection looks dead for no visible reason. We read
+this switch back from LINE and tell you on the LINE tab if it is off.
+
+**Auto-responses must be off**, or LINE answers with its own canned reply
+before we ever see the message, and it looks like your bot is ignoring people.
+Where this setting lives depends on the Chat switch, which is confusing the
+first time:
+
+- **Chat off** → *Auto-response messages* is its own toggle under Toggle
+  responses. Turn it off.
+- **Chat on** → that toggle disappears and the choice moves down to *Chat
+  response method*. Pick **Manual chat**, not "Manual chat + auto-response
+  messages". This is what the screenshot above shows.
+
+LINE gives us no way to read this one back, so nobody can check it for you.
+
+**Chat itself is a real choice.** On, and messages also land in LINE's own chat
+console — you have two inboxes, and anything answered inside LINE never reaches
+ours. Off, and everything comes here. Both work; if you leave it on, our LINE
+tab will remind you that a second inbox exists.
+
+*Greeting message* can stay on if you want one — it fires when someone adds you
+as a friend and does not interfere with anything. *Allow bot to join group
+chats* can stay off; group chats are not connected yet either way.
+
+Press **Check connection** on the LINE tab after changing anything.
 
 ### What works, and what does not yet
 
